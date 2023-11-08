@@ -1,0 +1,13 @@
+extends ../layouts/main-layout.pug 
+
+include ../mixins/createProduct.pug
+
+block content
+    .row
+        .col-lg-3
+            include ../includes/menu.pug
+        .col-lg-9
+            .row
+                include ../includes/slider.pug
+                each product in products
+                    +createProduct(product)
